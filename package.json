@@ -1,0 +1,22 @@
+{
+  "name": "cordova-plugin-firebase-notifications",
+  "version": "0.1.0",
+  "description": "A Cordova plugin for Firebase Notifications.",
+  "author": "Joshua McFarland",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcfarljw/cordova-plugin-firebase-notifications"
+  },
+  "keywords": [
+    "cordova",
+    "firebase",
+    "notifications"
+  ],
+  "cordova": {
+    "id": "cordova-plugin-firebase-notifications",
+    "platforms": [
+      "android"
+    ]
+  }
+}
