@@ -32,8 +32,8 @@
       </service>
     </config-file>
 
-    <framework src="com.google.firebase:firebase-core:11.2.0" />
-    <framework src="com.google.firebase:firebase-messaging:11.2.0" />
+    <framework src="com.google.firebase:firebase-core:11.2.2" />
+    <framework src="com.google.firebase:firebase-messaging:11.2.2" />
 
     <source-file src="src/android/FirebaseNotificationsPlugin.java" target-dir="src/com/jernung/plugins/firebase/notifications" />
     <source-file src="src/android/PluginMessagingService.java" target-dir="src/com/jernung/plugins/firebase/notifications" />
