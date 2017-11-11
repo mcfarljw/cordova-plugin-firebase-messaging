@@ -1,4 +1,4 @@
-package com.jernung.plugins.firebase.notifications;
+package com.jernung.plugins.firebase.messaging;
 
 import android.util.Log;
 
@@ -7,7 +7,7 @@ import com.google.firebase.messaging.RemoteMessage;
 
 public class PluginMessagingService extends FirebaseMessagingService {
 
-    private static final String PLUGIN_NAME = "FirebaseNotificationsPlugin";
+    private static final String PLUGIN_NAME = "FirebaseMessagingPlugin";
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {

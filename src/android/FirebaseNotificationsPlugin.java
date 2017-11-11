@@ -1,4 +1,4 @@
-package com.jernung.plugins.firebase.notifications;
+package com.jernung.plugins.firebase.messaging;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
@@ -7,9 +7,9 @@ import org.apache.cordova.CordovaWebView;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-public class FirebaseNotificationsPlugin extends CordovaPlugin {
+public class FirebaseMessagingPlugin extends CordovaPlugin {
 
-    private static final String PLUGIN_NAME = "FirebaseNotificationsPlugin";
+    private static final String PLUGIN_NAME = "FirebaseMessagingPlugin";
 
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {

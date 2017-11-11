@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="com-jernung-plugin-firebase-notifications"
+        id="com-jernung-plugin-firebase-messaging"
         version="0.1.0">
 
-  <name>Firebase Notifications Plugin</name>
-  <description>A Cordova plugin for Firebase Notifications.</description>
-  <author>Jernung, LLC</author>
+  <name>Firebase Messaging Plugin</name>
+  <description>A Cordova plugin for Firebase Messaging.</description>
+  <author>Joshua McFarland</author>
   <license>MIT</license>
-  <keywords>cordova,firebase,notifications</keywords>
+  <keywords>cordova,firebase,messaging</keywords>
 
-  <js-module src="www/firebase-notifications.js" name="FirebaseNotificationsPlugin">
-    <clobbers target="plugins.firebase.notifications" />
+  <js-module src="www/firebase-messaging.js" name="FirebaseMessagingPlugin">
+    <clobbers target="plugins.firebase.messaging" />
   </js-module>
+
+  <dependency id="com-jernung-plugin-firebase" url="https://github.com/mcfarljw/cordova-plugin-firebase" />
 
   <platform name="android">
 
-    <dependency id="com-jernung-plugin-firebase" url="https://github.com/mcfarljw/cordova-plugin-firebase" />
-
     <config-file target="config.xml" parent="/*">
-      <feature name="FirebaseNotificationsPlugin" >
-        <param name="android-package" value="com.jernung.plugins.firebase.notifications.FirebaseNotificationsPlugin" />
+      <feature name="FirebaseMessagingPlugin" >
+        <param name="android-package" value="com.jernung.plugins.firebase.messaging.FirebaseMessagingPlugin" />
         <param name="onload" value="true" />
       </feature>
     </config-file>
 
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
-      <service android:name="com.jernung.plugins.firebase.notifications.PluginMessagingService">
+      <service android:name="com.jernung.plugins.firebase.messaging.PluginMessagingService">
         <intent-filter>
           <action android:name="com.google.firebase.MESSAGING_EVENT"/>
         </intent-filter>
@@ -35,8 +35,25 @@
     <framework src="com.google.firebase:firebase-core:11.6.0" />
     <framework src="com.google.firebase:firebase-messaging:11.6.0" />
 
-    <source-file src="src/android/FirebaseNotificationsPlugin.java" target-dir="src/com/jernung/plugins/firebase/notifications" />
-    <source-file src="src/android/PluginMessagingService.java" target-dir="src/com/jernung/plugins/firebase/notifications" />
+    <source-file src="src/android/FirebaseMessagingPlugin.java" target-dir="src/com/jernung/plugins/firebase/messaging" />
+    <source-file src="src/android/PluginMessagingService.java" target-dir="src/com/jernung/plugins/firebase/messaging" />
+
+  </platform>
+
+  <platform name="ios">
+
+    <config-file target="config.xml" parent="/*">
+			<feature name="FirebaseMessagingPlugin">
+				<param name="ios-package" value="FirebaseMessagingPlugin" />
+				<param name="onload" value="true" />
+			</feature>
+		</config-file>
+
+    <header-file src="src/ios/FirebaseMessagingPlugin.h" />
+    <source-file src="src/ios/FirebaseMessagingPlugin.m" />
+
+    <framework src="src/ios/Firebase/FirebaseMessaging.framework" custom="true" />
+    <framework src="src/ios/Firebase/Protobuf.framework" custom="true" />
 
   </platform>
 

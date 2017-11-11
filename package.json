@@ -1,22 +1,23 @@
 {
-  "name": "cordova-plugin-firebase-notifications",
+  "name": "cordova-plugin-firebase-messaging",
   "version": "0.1.0",
-  "description": "A Cordova plugin for Firebase Notifications.",
+  "description": "A Cordova plugin for Firebase Messaging.",
   "author": "Joshua McFarland",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mcfarljw/cordova-plugin-firebase-notifications"
+    "url": "https://github.com/mcfarljw/cordova-plugin-firebase-messaging"
   },
   "keywords": [
     "cordova",
     "firebase",
-    "notifications"
+    "messaging"
   ],
   "cordova": {
-    "id": "cordova-plugin-firebase-notifications",
+    "id": "cordova-plugin-firebase-messaging",
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }
